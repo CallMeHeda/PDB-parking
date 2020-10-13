@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?language javascript?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="bpPl" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.place.VuePlaceController">
+	<top>
+		<AnchorPane BorderPane.alignment="CENTER">
+			<BorderPane.margin>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</BorderPane.margin>
+			<children>
+				<Label id="titreVP" alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="490.0" text="Gestion Des Places" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<font>
+						<Font name="Calibri" size="36.0" />
+					</font>
+					<padding>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</padding>
+				</Label>
+			</children>
+		</AnchorPane>
+	</top>
+	<bottom>
+		<AnchorPane prefHeight="39.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+			<children>
+				<Button fx:id="btOk" layoutX="421.0" layoutY="13.0" mnemonicParsing="false" onAction="#valider" onDragDetected="#valider" text="%listePl.btOk" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+				<Button fx:id="btCancel" layoutX="354.0" layoutY="5.0" mnemonicParsing="false" onAction="#annuler" text="%listePl.suppr" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="5.0" />
+
+			</children>
+		</AnchorPane>
+	</bottom>
+   <center>
+		<GridPane alignment="CENTER_RIGHT" hgap="10.0" opacity="0.74" prefHeight="290.0" prefWidth="381.0" style="-fx-background-color: salmon;" vgap="5.0" BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints />
+				<ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="224.0" minWidth="10.0" prefWidth="224.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="246.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="83.0" valignment="CENTER" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="159.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+			
+				<Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="39.0" prefWidth="166.0" text="%listePl.code" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+					
+				<TextField id="promptTxt" fx:id="codeP" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="2" />
+					
+				<Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="68.0" text="%listePl.taille" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+				<Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="173.0" text="%listePl.etat" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Spinner fx:id="tailleP" prefWidth="198.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="-50.0" />
+               </padding></Spinner>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <RadioButton fx:id="etatLibre" mnemonicParsing="false" prefHeight="78.0" prefWidth="150.0" selected="true" text="%listePl.libre" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></RadioButton>
+                  <RadioButton fx:id="etatP2" mnemonicParsing="false" prefHeight="78.0" prefWidth="271.0" text="%listePl.Occ" textFill="WHITE" />
+               </children>
+            </HBox>
+			</children>
+			<BorderPane.margin>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</BorderPane.margin>
+			<padding>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</padding>
+		</GridPane>
+   </center>
+</BorderPane>

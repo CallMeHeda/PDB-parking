@@ -1,0 +1,93 @@
+.titre{
+	-fx-text-alignment : center ;
+	-fx-font: 20.0px Georgia ;
+	-fx-background-color: #d8564e;
+	-fx-padding: 10.0;
+}
+
+.label{
+	-fx-font: 14.0px Georgia ;
+	-fx-padding: 5.0px;
+	 
+}
+
+.button{
+	-fx-padding: 5.0px;
+}
+
+.b-in-hbox{
+	-fx-padding:5;
+	/*-fx-background-image: url(/view/images/black_red.png);*/
+	-fx-background-color: salmon;
+	-fx-background-position: center; 
+}
+
+#immatr:activeBtn{
+	-fx-border-color: white;
+	-fx-border-width: 50px;
+	
+}
+
+#status-anchor {
+	-fx-background-color:bisque;
+	
+}
+#statuslbl {
+	-fx-background-color:azure;
+	-fx-graphic:url(../images/ok.png);
+}
+
+#statuslbl:error {
+	-fx-background-color:orange;
+	-fx-graphic:url(/view/images/error.png);
+}
+
+.bt-place{
+	-fx-background-color: lightgreen;
+	-fx-font: bold 15.0px Georgia ;
+}
+#gpPlace{
+	-fx-background-image: url(/view/images/black_red.png);
+	-fx-background-position: center; 	
+}
+.bt-place:busy{
+	-fx-background-color: tomato;
+	-fx-font: bold 15.0px Georgia;
+	
+}
+
+.text-field:error{
+	-fx-background-color: orange;
+	-fx-border-color: red;
+}
+BorderPane{
+    	-fx-background-image: url(/view/images/black_red.png);	
+    	-fx-background-position: center; 
+}
+#promptTxt{
+	-fx-prompt-text-fill: red;
+}
+Button{
+	/*-fx-background-radius: 10% ;*/
+	-fx-background-color: #f1a9a1 ;
+}
+
+#bouton_menu{
+	-fx-padding: 10 0 10 0;
+	/*-fx-background-radius: 20%;*/
+	-fx-pref-width: 100px;
+}
+
+
+TilePane{
+	-fx-alignment: center-left ;
+	-fx-padding: 15 60 10 200;
+}
+
+#nomPark{
+	-fx-font-family: "Century";
+	-fx-padding: 60 0 0 0;
+	/*-fx-text-fill: blanchedalmond;*/
+	-fx-text-fill: linear-gradient(from 0% 0% to 120% 200%, repeat, #ed6363 35%, #333333 52%);
+	-fx-font-size: 60px;
+}

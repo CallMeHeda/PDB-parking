@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" stylesheets="@../css/parking.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.historique.VueHistoriqueController">
+   <children>
+      <Label alignment="CENTER" layoutX="107.0" layoutY="14.0" styleClass="titre" text="%histo.titre" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="14.0" />
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="150.0" layoutY="84.0" prefHeight="316.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+         <content>
+            <TableView fx:id="tableHisto" prefHeight="284.0" prefWidth="498.0">
+              <columns>
+                <TableColumn fx:id="col_immatr" prefWidth="75.0" text="%histo.immatr" />
+                <TableColumn fx:id="col_momentA" prefWidth="75.0" text="%histo.momentA" />
+                  <TableColumn fx:id="col_place" prefWidth="75.0" text="%histo.place" />
+                  <TableColumn fx:id="col_momS" prefWidth="75.0" text="%histo.momentS" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="zRech" layoutX="68.0" layoutY="52.0" prefHeight="25.0" prefWidth="175.0" promptText="Recherche" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="257.0" />
+      <ComboBox fx:id="combo" layoutX="262.0" layoutY="52.0" prefHeight="26.0" prefWidth="175.0" AnchorPane.rightAnchor="63.0" />
+   </children>
+</AnchorPane>
